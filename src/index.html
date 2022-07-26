@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>채팅 서버(SOCKET.IO)</title>
+    <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+    
+    <div class="talkBox">
+
+        <div class="tbx"></div>
+
+        <div class="bbx">
+            <textarea placeholder="입력칸"></textarea>
+            <button id="send">보내기</button>
+        </div>
+        
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="./chat.js"></script>
+
+</body>
+</html>
