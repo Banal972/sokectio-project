@@ -1,18 +1,20 @@
 * {margin: 0; padding: 0;}
 
-.talkBox {height: 500px; width: 300px; border: 1px solid #000; display: flex; flex-direction: column; justify-content: space-between;}
+.talkBox {height: 700px; width: 400px; border: 1px solid #000; display: flex; flex-direction: column; justify-content: space-between;}
 
-.talkBox .tbx {box-sizing: border-box; padding: 10px; height: 90%; overflow-y: auto;}
+.talkBox .tbx {box-sizing: border-box; padding: 10px; height: 90%; overflow-y: auto; background-color: skyblue;}
 
 .talkBox .chatinBar {text-align: left;}
+.talkBox .chatinBar ~ .chatinBar {margin-top: 10px;}
 .talkBox .chatinBar h2 {font-size: 18px;}
-.talkBox .chatinBar p {font-size: 16px;}
+.talkBox .chatinBar p {font-size: 16px; background: #fff; border-radius: 10px; padding: 5px 10px; box-sizing: border-box; margin-top: 10px; width: 80%;}
 
 .talkBox .chatinBar.right {text-align: right;}
+.talkBox .chatinBar.right p {background: rgb(234, 255, 100); margin-left: auto;}
 
 
 
 .talkBox .bbx {display: flex; height: 10%;}
 .talkBox .bbx * {flex: 1; box-sizing: border-box; padding: 10px;}
-.talkBox .bbx textarea {flex: 5; resize: none;}
-.talkBox .bbx button {cursor: pointer;}
+.talkBox .bbx textarea {flex: 5; resize: none; outline: 0; border: 0;}
+.talkBox .bbx button {cursor: pointer; background: rgb(234, 255, 100); border: 0;}

@@ -7,12 +7,14 @@ const send = document.querySelector('.talkBox .bbx #send');
 const tbx = document.querySelector('.talkBox .tbx');
 const NAME = prompt('채팅방에 사용할 이름을 적어주세요');
 
+
 function chatSend(){
     const param = {
         name : NAME,
         msg : chatInput.value
     }
     socket.emit('chatting',param);
+    chatInput.value = null;
 }
 
 chatInput.addEventListener('keypress',(event)=>{
@@ -25,11 +27,11 @@ send.addEventListener('click',chatSend);
 
 socket.on("chatting",data => {
 
-    console.log(data);
     const {name, msg, time} = data;
     const itme = new chatModel(name, msg, time);
     itme.makeChat();
     tbx.scrollTo(0,tbx.scrollHeight);
+    
 });
 
 class chatModel {
@@ -46,7 +48,6 @@ class chatModel {
                 <p>${this.msg}</p>
             </div>`;
         div.innerHTML = dom;
-        console.log(div);
         tbx.appendChild(div);
     }
 }
