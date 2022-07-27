@@ -1,6 +1,11 @@
 * {margin: 0; padding: 0;}
 
-.talkBox {height: 700px; width: 400px; border: 1px solid #000; display: flex; flex-direction: column; justify-content: space-between;}
+.addPeople {position: fixed; top: 0; width: 100%; font-size: 10px; color: #fff; background: rgba(0, 0, 0, 0.5); text-align: center; padding: 10px 0; transform: translateY(-100%);}
+.addPeople.on {transform: translateY(0);}
+
+
+
+.talkBox {height: 700px; width: 400px; border: 1px solid #000; display: flex; flex-direction: column; justify-content: space-between; margin: 0 auto;}
 
 .talkBox .tbx {box-sizing: border-box; padding: 10px; height: 90%; overflow-y: auto; background-color: skyblue;}
 

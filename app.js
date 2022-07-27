@@ -14,6 +14,10 @@ const PORT = process.env.PORT || 5000;
 
 io.on('connection',socket => {
 
+    socket.on('new connect',name=>{
+        io.emit('new connect',name);
+    })
+
     socket.on('chatting',data=>{
         const { name, msg }  = data;
         io.emit("chatting",{
